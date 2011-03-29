@@ -53,6 +53,23 @@
       loop().
 
 !SLIDE
+# List Comprehensions #
+     L = [ {X,Y} ||
+       X <- [1,2,3,4], Y <- [1,2,3,4], X*X == Y].
+
+!SLIDE small
+# case, if ?! #
+    is_valid_signal(Signal) ->
+    case Signal of
+        {signal, _What, _From, _To} ->
+            true;
+        {signal, _What, _To} ->
+            true;
+        _Else ->
+            false
+    end.
+
+!SLIDE
 # Behaviour. Just give me callback module #
     -behaviour(gen_server).
 
